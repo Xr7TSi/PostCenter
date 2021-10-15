@@ -14,9 +14,9 @@ app.use(express.json({ limit: "30mb", extended: true})); //Used to parse JSON bo
 app.use(express.urlencoded({ limit: "30mb", extended: true})); //Parse URL-encoded bodies
 app.use(cors());
 
-app.use('/posts', postRoutes);
+app.use('/api/posts', postRoutes);
 // https://cloud.mongodb.com/v2/612f9c2b0c725656ddb32923#clusters
-app.use('/user', userRoutes);
+app.use('/api/user', userRoutes);
 
 
 const PORT = process.env.PORT || 5000;

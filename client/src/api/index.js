@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+// for dev
+// const API = axios.create({ baseURL: 'http://localhost:5000' });
+
+// for production
+const API = axios.create({ baseURL: '/api' });
 
 // adds function to all requests that includes auth token
 API.interceptors.request.use((req) => {
