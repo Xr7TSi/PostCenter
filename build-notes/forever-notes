@@ -1,0 +1,7 @@
+To launch server and keep it running after connection is dropped:
+
+sudo forever index.js &
+
+
+*Forever is a Node.js module that can be used to run Node.js applications on a schedule.  In this case,  it is used to keep the server running after the connection to the server is dropped.
+*Forever has been added to the Ubuntu instance. 
