@@ -1,0 +1,129 @@
+CLIENT
+
+docker build -t react-app .  :  Build Fontend with container name react-app
+
+docker run -p 3000:3000 react-app  : Run Font End
+
+
+SERVER
+
+docker build -t node-app . : Build Backend
+
+
+DOCKER COMPOSE
+
+docker-compose build   : build all containers
+
+docker-compose up  : run all containers
+
+docker image ls  : list all images
+
+docker image rm {image id}  : remove image
+
+docker ps : list open containers
+
+docker volume ls : list all volumes
+
+docker volume rm {volume id} : remove volume
+
+docker volume prune : remove unused volumes
+
+
+
+
+
+docker build -t node-app-image .
+
+docker run -d -v %cd%:/app:ro -v /app/node_modules -p 3000:3000 --name node-app node-app-image : 
+    node-app is the name of the container.  
+    node app image is the name of the image the container is created from.
+    -p 3000-3000 number on left is incoming traffic from outside world, number on right traffic going to the container.
+    -v /app/node_modules prevents node_modules from changed in the container.
+    -v %cd%:/app:ro  Binds localhost current directory to the app.  
+        Allows nodemon live changes to the running container. (must run from cmd prompt)
+        :ro makes the container read only.  Only local host can write to the container. 
+    
+
+docker ps : show running containers
+
+docker container ls : show all containers
+
+docker rm node-app -f : remove container and force shutdown
+    -fv deletes related volume when deleting a container
+
+docker exec -it node-app bash  :  Access file system inside container
+    printenv : print environment variables
+
+docker volume prune : remove unused volumes
+
+docker-compose up -d : run docker-compose up -d
+
+docker-compose up -d --build : run docker-compose up -d --build
+
+docker-compose down -v : run docker-compose down with delete volumes
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
+
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
+
+
+y.yaml validator: https://codebeautify.org/yaml-validator
+
+
+
+
+
+
+
+FLAGS
+
+-d : detached mode.  Allows continued use of command line.
+-v : volume mode.  Creates a volume between the host and the container.
+--name : provides name of the container
+
+
+Push to Docker Hub:
+
+https://www.youtube.com/watch?v=iIYw0Z0AI1c
+
+
+Deploy on AWS ECS 
+
+https://keithweaverca.medium.com/setting-up-mern-stack-on-aws-ec2-6dc599be4737
+
+https://xiaoyunyang.github.io/post/a-complete-guide-to-deploying-your-web-app-to-amazon-web-service/
+
+
+
+Install docker on Ubuntu: https://geekylane.com/install-docker-on-aws-ec2-ubuntu-18-04-script-method/
+
+Check installed docker version: sudo docker -v
+
+
+Docker login:
+
+docker login registry-1.docker.io
+
+Push to Docker Hub:
+
+
+
+
+AWS EC@ Tutorial with Filezilla https://www.youtube.com/watch?v=awFLzy0XwXo
+
+
+Set up empty Ubuntu EC2 instance:
+
+(copy, then right click on Ubuntu to paste)
+
+https://support.netfoundry.io/hc/en-us/articles/360057865692-Installing-Docker-and-docker-compose-for-Ubuntu-20-04
+
+
+Link from Matt
+
+https://levelup.gitconnected.com/how-to-render-react-app-using-express-server-in-node-js-a428ec4dfe2b
+
