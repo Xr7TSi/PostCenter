@@ -1,9 +1,13 @@
+// this file was replaced with client/src/reducers/posts.js in order to correct error at compile which did not impact performance.
+
+
+
 // defines how to handle the array of posts based on each action
 
 import { FETCH_ALL_POSTS, CREATE_POST, UPDATE_POST, DELETE_POST, LIKE_POST  } from '../constants/actionTypes.js';
 
-const postActions = (posts = [], action) => {
-
+export default (posts = [], action) => {
+  
   switch (action.type) {
     
     case FETCH_ALL_POSTS:
@@ -37,5 +41,3 @@ const postActions = (posts = [], action) => {
       return posts;
   }
 };
-
-export default postActions;

@@ -1,0 +1,33 @@
+server {
+  #listen443;
+listen 443 ssl;
+server_name  xr7tsi.com www.xr7tsi.com;
+
+ssl_certificate xr7tsi.com;
+ssl_certificate www.xr7tsi.com;
+ssl_certificate_key xr7tsi.com.key;
+ssl_certificate_key www.xr7tsi.com.key;
+
+access_log /home/ubuntu/client/server_logs/host.access.log main;
+location / {
+root   /home/ubuntu/client/build;
+index  index.html index.htm;
+try_files $uri /index.html;
+add_header X-Frame-Options SAMEORIGIN;
+add_header X-Content-Type-Options nosniff;
+add_header X-XSS-Protection "1; mode=block";
+add_header Strict-Transport-Security "max-age=31536000; includeSubdomains;";
+}
+error_page   500 502 503 504  /50x.html;
+location = /50x.html {
+root   /usr/share/nginx/html;
+}
+server_tokens off;
+location ~ /\.ht {
+deny  all;
+}
+location /api {
+proxy_set_headerX-Forwarded-For $remote_addr;
+proxy_set_headerHost $http_host;
+proxy_passhttp://127.0.0.1:5000;
+}

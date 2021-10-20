@@ -25,7 +25,7 @@ const Navbar = () => {
 
     
     // used from google OAuth
-    useEffect(() => {
+    useEffect((logout, user) => {
         // when there is user.token, set user.token to variable "token"
         const token = user?.token;
         // setUser to profile data stored in local storage

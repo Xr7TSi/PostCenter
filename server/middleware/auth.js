@@ -16,7 +16,7 @@ const auth = async (req, res, next) => {
             
             req.userId = decodedData?.id;
         } else {
-            // get user id if user is using google auth
+            // get user id if user is using google 0auth
             decodedData = jwt.decode(token);
             // sub is a unique user id in google speak
             req.userId = decodedData?.sub;
