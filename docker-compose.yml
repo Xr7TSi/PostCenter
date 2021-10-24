@@ -6,8 +6,8 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    image: mern-docker-project-server
-    container_name: mern-docker-project-node-server
+    image: postcenter-server
+    container_name: postcenter-node-server
     ports:
       - "5000:5000"
     env_file: ./server/.env
@@ -19,8 +19,8 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: mern-docker-project-client
-    container_name: mern-docker-project-react-client
+    image: postcenter-client
+    container_name: postcenter-client
     depends_on:
       - server
     ports:
