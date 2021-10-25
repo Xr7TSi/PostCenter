@@ -1,3 +1,5 @@
+Nginx tutorial: https://betterprogramming.pub/deploy-mern-stack-app-on-aws-ec2-with-letsencrypt-ssl-8f463c01502a
+
 sudo service nginx restart
 
 sudo service nginx reload
@@ -7,3 +9,5 @@ sudo service nginx status
 sudo service nginx start
 
 sudo service nginx stop
+
+
