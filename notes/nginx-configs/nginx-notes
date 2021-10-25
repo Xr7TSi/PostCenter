@@ -4,4 +4,6 @@ sudo service nginx reload
 
 sudo service nginx status
 
+sudo service nginx start
+
 sudo service nginx stop
