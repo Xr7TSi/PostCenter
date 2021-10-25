@@ -1,5 +1,7 @@
 Nginx tutorial: https://betterprogramming.pub/deploy-mern-stack-app-on-aws-ec2-with-letsencrypt-ssl-8f463c01502a
 
+Use sudo nano to edit config files.  crtl-k to delete stuff
+
 sudo service nginx restart
 
 sudo service nginx reload
