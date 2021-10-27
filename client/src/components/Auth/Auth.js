@@ -54,6 +54,7 @@ const Auth = () => {
     const result = res?.profileObj;
     const token = res?.tokenId;
     
+    
     try {
       dispatch({ type: 'AUTH', data: { result, token } });
       // redirect user to home after login

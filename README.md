@@ -1,13 +1,19 @@
  # ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
 
 
-## PostCenter
+# PostCenter
 
-Project Description
+PostCenter is a social media app.
 
-## [PostCenter](https://clone-14498.web.app/)
+It features email and Google OAuth for login.
 
-![PostCenter image](assets/Amazon-Clone.png)
+It's built with the MERN stack and is hosted on an Amazon Web Services EC2 Ubuntu instance.
+
+It uses NGINX for managing SSL and proxy. 
+
+## [PostCenter](https://xr7tsi.com/)
+
+![PostCenter image](assets/PostCenterResize.png)
 
 
 &nbsp;

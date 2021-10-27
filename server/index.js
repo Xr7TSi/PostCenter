@@ -15,7 +15,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true})); //Parse URL-encod
 app.use(cors());
 
 app.use('/api/posts', postRoutes);
-// https://cloud.mongodb.com/v2/612f9c2b0c725656ddb32923#clusters
+
 app.use('/api/user', userRoutes);
 
 
