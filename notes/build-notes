@@ -4,6 +4,13 @@ https://www.youtube.com/watch?v=ngc9gnGgUdA
 
 https://www.youtube.com/watch?v=aibtHnbeuio&t=0s
 
+For aws ec2 connection:
+
+Use FileZilla to transfer files.  
+Host is the public ip address (sftp://54.157.9.52)
+Username is ubuntu
+No Password
+Port is 22
 
 
 
