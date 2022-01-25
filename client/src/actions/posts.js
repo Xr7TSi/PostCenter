@@ -9,7 +9,9 @@ import * as api from '../api/index.js';
 // action creators are functions that return an action.
 export const getPosts = () => async (dispatch) => {
     try {
+        // pulls data from api (src/sctions/posts.js)
         const { data } = await api.fetchPosts();
+        // returns data (reducers/posts.js)
         dispatch({ type: FETCH_ALL_POSTS, payload: data})
     } catch (error) {
         console.log('Get Posts ' + error);

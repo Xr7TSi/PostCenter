@@ -59,7 +59,7 @@ const Form = ( { currentId, setCurrentId}) => {
   };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} style={{borderRadius: "0.75rem"}}>
       <form
         autoComplete="off"
         noValidate

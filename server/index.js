@@ -14,8 +14,9 @@ app.use(express.json({ limit: "30mb", extended: true})); //Used to parse JSON bo
 app.use(express.urlencoded({ limit: "30mb", extended: true})); //Parse URL-encoded bodies
 app.use(cors());
 
+// this adds a prefix of api/posts to all routes in postRouts
 app.use('/api/posts', postRoutes);
-
+// this adds a prefix of api/users to all routes in userRouts
 app.use('/api/user', userRoutes);
 
 
