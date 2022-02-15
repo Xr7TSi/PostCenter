@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // use .env files
-const API = axios.create({ baseURL: process.env.REACT_APP_API_ENDPOINT });
+// const API = axios.create({ baseURL: process.env.REACT_APP_API_ENDPOINT });
 
 // for dev
 // const API = axios.create({ baseURL: 'http://localhost:5000/api' });
 
 // for production
-// const API = axios.create({ baseURL: '/api' });
+const API = axios.create({ baseURL: '/api' });
 
 // adds function to all requests that includes auth token
 API.interceptors.request.use((req) => {
