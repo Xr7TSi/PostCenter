@@ -1,3 +1,8 @@
+/assets/
+/parking-lot
 /notes
+/docker-compose.yml
+/readme.md
+
 
 #clear git cache = git rm -rf --cached .
