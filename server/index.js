@@ -22,7 +22,7 @@ app.use('/api/user', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 const CONNECTION_URL = process.env.CONNECTION_URL
-// const CONNECTION_URL = "mongodb+srv://Xr7TSi:Tacoma10@cluster0.7ekba.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
 
 mongoose.connect(CONNECTION_URL, {useNEWUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => console.log(`Listening on port ${PORT}`)))
